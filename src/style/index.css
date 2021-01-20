@@ -1,0 +1,138 @@
+html,
+body,
+a,
+p,
+span,
+div,
+button {
+  padding: 0;
+  margin: 0;
+  font-family: 'Source Code Pro', monospace;
+}
+
+body {
+  /* background-image: url('https://img1.dowebok.com/2393.png'); */
+  background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190628/ourmid/pngtree-cute-pink-background-material-image_281272.jpg');
+  background-color: rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+#outer-container {
+  position: relative;
+  display: block;
+  width: calc(100% - 40px);
+  height: calc(100vh - 40px);
+  margin: 20px;
+  padding: 50px 0 0 0;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+#outer-container header {
+  position: absolute;
+  top: -7px;
+}
+
+#outer-container title {
+  position: relative;
+  display: inline-block;
+  width: 170px;
+  margin-left: 30px;
+  background-color: #fff;
+  text-align: center;
+  font-weight: 900;
+  z-index: 99;
+}
+
+#outer-container button {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: -10px;
+  left: 80%;
+  border: 0;
+  outline: none;
+  background-image: url('https://pic.90sjimg.com/design/03/22/51/94/5c905fd07944c.png');
+  background-color: transparent;
+  background-size: contain;
+  cursor: pointer;
+  z-index: 99;
+}
+
+#outer-container button {
+  transition: 5s;
+  animation-duration: 5s;
+  animation-name: pointerAnimation;
+  animation-iteration-count: infinite;
+}
+
+#draw-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+#draw-container div {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  animation-duration: 1.5s;
+  animation-name: nodeInserted;
+}
+
+#draw-container #template-ball {
+  display: none;
+}
+
+#draw-container img {
+  width: 100px;
+}
+
+#draw-container p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 40px;
+}
+
+@keyframes pointerAnimation {
+  0% {
+    transform: scale(1.2);
+  }
+
+  5% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.2);
+  }
+
+  15% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes nodeInserted {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+  }
+
+  30% {
+    filter: blur(1px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
